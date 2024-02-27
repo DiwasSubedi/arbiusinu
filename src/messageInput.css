@@ -1,0 +1,236 @@
+/* CSS (App.css) */
+
+@import url('https://fonts.google.com/specimen/Anta') ;
+
+@font-face {
+  font-family: Anta;
+  src: url('https://fonts.google.com/specimen/Anta');
+}
+
+.glow {
+  font-size: 80px;
+  color:#e0fdf7;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+
+body{
+  margin:unset!important;    
+  font-family: Anta, sans-serif;
+}
+.main-container {
+
+  display: flex;
+  background-size:cover;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Adjust to start from the top */
+  /* height: 100vh; */
+/* background-color: transparent ;  */
+     
+  font-family: Anta, sans-serif;
+
+
+
+  margin: 0;
+  overflow: inherit;
+ 
+  z-index: 4;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+  
+  .greeting {
+    padding: 1rem;    width: 44rem;  
+text-align:center;
+    background-color: #282c3433;
+    border: 1px solid #282c3488;
+    color: #282c34aa;
+    font-size: 24px;text-align:center;
+    margin-bottom: 1rem;margin-top:3rem;
+    cursor: pointer;z-index:10;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+       
+  font-family: Anta, sans-serif;
+    opacity: 90%;  max-width: calc(100% - 6rem - 2px);
+  }
+   /* Animation for glowing effect */
+   @keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(0,0,255,0.7); }
+    50% { box-shadow: 0 0 20px rgba(0,0,255,0.7); }
+    100% { box-shadow: 0 0 10px rgba(0,0,255,0.7); }
+  }
+
+  /* Apply animation to div with class glow-div */
+  input[type=text],
+  .glow-div {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(227, 252, 255, 0.7); /* Initial box-shadow for the glow effect */
+    transition: box-shadow 0.3s ease;
+  }
+
+  /* Glowing effect on hover or focus */
+  .glow-div {
+    box-shadow: 0 0 20px rgba(72, 234, 252, 0.7); /* Adjust the color and spread for desired glow effect */
+  }
+
+  /* Animation for glowing effect */
+  @keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(116, 227, 240, 0.7); }
+    50% { box-shadow: 0 0 20px rgba(152, 245, 255, 0.7); }
+    100% { box-shadow: 0 0 10px rgba(227, 252, 255, 0.7); }
+  }
+
+  /* Apply animation to div with class glow-div */
+  .glow-div.animated {
+    animation: glow 1.5s ease infinite;
+  }
+  
+  /* input[type=text]::placeholder {
+    font-size: 1rem;
+    color: transparent;
+    background-image: linear-gradient(to right, #00FFFF, #00BFFF, #1E90FF, #0000FF, #00008B, #8A2BE2, #800080);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: coldFire 5s linear infinite;
+  } */
+
+  input[type=text] {
+    font-family: Anta;
+    font-size: 1rem;
+    color: transparent;
+    background-image: linear-gradient(to right, #00FFFF, #00BFFF, #1E90FF, #0000FF, #00008B, #8A2BE2, #800080);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: coldFire 5s linear infinite;
+  }
+  .text {
+    font-size: 1rem;
+    color: transparent;
+    background-image: linear-gradient(to right, #00FFFF, #00BFFF, #1E90FF, #0000FF, #00008B, #8A2BE2, #800080);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: coldFire 5s linear infinite;
+  }
+
+  .option {
+    padding: 1rem 1rem;
+    background-color: #282c3433;
+    border: 1px solid #282c3488;
+    color: #282c34aa;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+       
+  font-family: Anta, sans-serif;
+    opacity: 90%;
+  }
+  
+  .option:hover {
+    background-color: #b8b1b1;
+  }
+
+  .chat-container {
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    padding: 20px;
+    background-color: transparent; /* Slightly darker to distinguish from the main area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 90%;
+    max-width: calc(100% - 0rem);
+    bottom:-60%;
+    }
+  
+  .chat-input {
+    /* padding: 0rem 0rem;backdrop-filter:blur(10px); */
+    border-radius: 10px;
+    margin-right: 10px;
+    background-color: #25282c; /* A darker shade for modern aesthetic */
+    color: #ffffff; /* White text color */
+    font-size: 16px; /* Adjust font size for better readability */
+    width: calc(48rem - 60px - 10px - 2rem); /* Assuming the send button is approximately 100px wide */
+    min-height: 39px; /* Initial height */
+    max-height: 40px; /* Maximum height before scrolling */
+    max-width:calc(100% - 60px - 10px - 2rem);
+    overflow-y: auto; /* Enable vertical scrolling */
+    resize: none; /* Disable user resize */
+    caret-color: white; 
+
+  }
+
+  .chat-input::placeholder {
+    color: #ffffff; /* Replace with the color you want */
+       
+  font-family: Anta, sans-serif;
+  }
+  
+  .chat-input:focus {
+    box-shadow: 0 0 20px rgba(72, 234, 252, 0.7); /* Adjust the color and spread for desired glow effect */
+  }
+  
+  
+  .send-button {backdrop-filter:blur(10px);
+    padding: 10px;
+    width: 60px; /* Fixed width for the button */
+    height: 60px; /* Fixed height to match the chat input */
+    border-radius: 10px; /* Circular button */
+    border: none;
+    background-color: #25282c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Positioning context for pseudo-elements */
+    opacity: 90%;
+  }
+  
+  .send-button::before {
+    content: '\2191'; /* Unicode character for upwards-pointing arrow */
+    font-size: 24px; /* Initial size of the arrow */
+    font-weight: bold; /* Make the arrow bolder */
+    display: block;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    /* Faux bold effect using text-shadow */
+    text-shadow: 
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000;
+  }
+  
+  .send-button:hover {
+    background-color: #b8b1b1;
+  }
+  
+  .send-button:hover::before {
+    transform: translateY(-5px); /* Move the arrow up slightly on hover */
+    font-size: 40px; /* Enlarge the arrow on hover */
+  }
+  
+  

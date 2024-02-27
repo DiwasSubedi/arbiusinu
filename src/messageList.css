@@ -1,0 +1,85 @@
+
+  /* Styling for user messages */
+  .user-message {
+    align-self: flex-end;
+    background-color: #41525f; /* Example color for user messages */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 16px;
+    margin: 4px;
+    max-width: 60%;
+  }
+  
+  /* Styling for response messages */
+  .response-message {
+    align-self: flex-start;
+    background-color: #e5e5ea; /* Example color for response messages */
+    color: black;
+    padding: 8px 16px;
+    border-radius: 16px;
+    margin: 4px;
+    max-width: 60%;
+  }
+
+  .user-message, .response-message {
+    max-width: 60%; /* or any other reasonable width */
+    word-wrap: break-word;
+    white-space: normal; /* Override if it's set to nowrap somewhere */
+  }
+
+  .messages-container {
+    backdrop-filter:rgba(255, 255, 255, 1);border-radius:10px;border:1px solid #0005;
+    background-color: rgba(201, 120, 238, 0.1); 
+    height: calc(100vh - 8rem); /* Explicitly set the height */
+    display: flex;
+    /* bottom:6rem; */
+    flex-direction: column;
+    align-items: center; /* Center messages horizontally */
+    justify-content: flex-start; /* Adjust to start from the top */
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translateX(-50%);
+    width: 48rem; /* Full width for centering */
+    max-width: calc(100% - 2rem);
+    overflow-y: auto; /* This should allow scrolling */
+    z-index: 3; /* Ensure it's above the background image */
+    padding: 1rem; /* Add padding inside the container */
+    box-sizing: border-box; /* Include padding in the width and height calculations */
+    box-shadow: 0 0 50px rgba(72, 234, 252, 0.8);
+  }
+
+  .typing-indicator {
+    display: flex;
+    align-self: flex-start; /* Aligns to the left */
+    padding: 8px 16px; /* Adjust padding as needed */
+    margin: 4px; /* Adjust margin as needed */
+  }
+  
+  .typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background-color: #eaecee;
+    border-radius: 50%;
+    margin-right: 4px; /* Space between dots */
+    animation: typing 1s infinite ease-in-out; /* Reduced duration for faster animation */
+  }
+  
+  @keyframes typing {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 0.2;
+    }
+    50% {
+      transform: translateY(-20px); /* Increased vertical movement */
+      opacity: 1;
+    }
+  }
+  
+  .typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s; /* Adjusted for faster animation */
+  }
+  
+  .typing-indicator span:nth-child(3) {
+    animation-delay: 0.1s; /* Adjusted for faster animation */
+  }
