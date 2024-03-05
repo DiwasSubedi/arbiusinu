@@ -2,7 +2,7 @@
   /* Styling for user messages */
   .user-message {
     align-self: flex-end;
-    background-color: #41525f; /* Example color for user messages */
+    background-color: blueviolet; /* Example color for user messages */
     color: white;
     padding: 8px 16px;
     border-radius: 16px;
@@ -13,7 +13,7 @@
   /* Styling for response messages */
   .response-message {
     align-self: flex-start;
-    background-color: #e5e5ea; /* Example color for response messages */
+    background-color: yellowgreen;
     color: black;
     padding: 8px 16px;
     border-radius: 16px;
@@ -22,26 +22,22 @@
   }
 
   .user-message, .response-message {
+    
     max-width: 60%; /* or any other reasonable width */
     word-wrap: break-word;
     white-space: normal; /* Override if it's set to nowrap somewhere */
+    opacity: 70%;
   }
 
   .messages-container {
     backdrop-filter:rgba(255, 255, 255, 1);border-radius:10px;border:1px solid #0005;
     background-color: rgba(201, 120, 238, 0.1); 
-    height: calc(100vh - 8rem); /* Explicitly set the height */
+    height: calc(100vh - 20rem); /* Explicitly set the height */
     display: flex;
     /* bottom:6rem; */
     flex-direction: column;
     align-items: center; /* Center messages horizontally */
     justify-content: flex-start; /* Adjust to start from the top */
-    position: absolute;
-    left: 50%;
-    top: 8%;
-    transform: translateX(-50%);
-    width: 48rem; /* Full width for centering */
-    max-width: calc(100% - 2rem);
     overflow-y: auto; /* This should allow scrolling */
     z-index: 3; /* Ensure it's above the background image */
     padding: 1rem; /* Add padding inside the container */

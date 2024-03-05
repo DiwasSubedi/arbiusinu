@@ -28,19 +28,17 @@ const MessageInput = ({ dispatch }) => {
   }
 
   return (
-    <div className="main-container">
-      
       <div className="chat-container">
-        <input
-          type="text"
-          className="chat-input"
-          onKeyPress={handleEnterPress}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          
-        />
-        <button className="send-button" onClick={handleSendMessage}></button>
-      </div>
+        <div className={"flex-item1"}>
+          <textarea
+            className="chat-input transparent-textarea"
+            onKeyPress={handleEnterPress}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            row="10" 
+          />
+        </div>
+        <div className={"flex-item2"}><button className="send-button" onClick={handleSendMessage}></button></div>
     </div>
   );
 }

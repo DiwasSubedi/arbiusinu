@@ -5,10 +5,10 @@ import MessageInput from './messageInput';
 
 function MainChat(messages) {
   return (
-    <div>
+    <>
       <MessageList messages={messages}/>
       <MessageInput />
-    </div>
+   </>
   );
 }
   const mapStatetoProps = (state) => ({

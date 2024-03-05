@@ -16,8 +16,8 @@ function App() {
     return (
       <div className="app">
         <div className="left-section">
-          <video src={city} autoPlay loop muted className="full-video" style={{ transform: 'scaleY(-1))' }}></video>
-          <video src={dog} autoPlay loop muted className="overlay-video"></video>
+          <video src={city} autoPlay loop muted className="full-video" ></video>
+          <div><video src={dog} autoPlay loop muted className="overlay-video"></video></div>
           <div className="button-container">
             <a href="https://discord.gg/fZXkYMAchQ"><img src="https://roko.network/img/Discordneedle.55b10906.svg" height={"35px"} width={"35px"} alt=""/></a>     
             <a href="https://t.me/RokoNetwork"><img src="https://roko.network/img/telegram.e57a616e.svg" height={"35px"} width={"35px"}alt=""/></a>

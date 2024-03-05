@@ -27,7 +27,7 @@ const MessageList = ({ messages, isTyping }) => {
         const messageClass = message.sender === 'user' ? 'user-message' : 'response-message';
 
         return (
-          <div key={index} className={messageClass + ' text glow-div'}>
+          <div key={index} className={messageClass}>
             {message.text}
           </div>
         );

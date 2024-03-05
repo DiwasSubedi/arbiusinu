@@ -14,44 +14,20 @@
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+/* .transparent-textarea {
+  background: transparent;
+  color: transparent;
+}
 
+.gradient-textarea {
+  background: linear-gradient(to right, #00FFFF, #00BFFF, #1E90FF, #0000FF, #00008B, #8A2BE2, #800080);
+  padding: 1em; 
+} */
 
 body{
   margin:unset!important;    
   font-family: Anta, sans-serif;
 }
-.main-container {
-
-  display: flex;
-  background-size:cover;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Adjust to start from the top */
-  /* height: 100vh; */
-/* background-color: transparent ;  */
-     
-  font-family: Anta, sans-serif;
-
-
-
-  margin: 0;
-  overflow: inherit;
- 
-  z-index: 4;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  width: 50%;
-  height: 50%;
-
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: translate(-50%, -50%);
-}
-
   
   .greeting {
     padding: 1rem;    width: 44rem;  
@@ -77,7 +53,7 @@ text-align:center;
   }
 
   /* Apply animation to div with class glow-div */
-  input[type=text],
+textarea,
   .glow-div {
     padding: 10px;
     border: none;
@@ -114,7 +90,7 @@ text-align:center;
     animation: coldFire 5s linear infinite;
   } */
 
-  input[type=text] {
+  textarea {
     font-family: Anta;
     font-size: 1rem;
     color: transparent;
@@ -122,6 +98,14 @@ text-align:center;
     -webkit-background-clip: text;
     background-clip: text;
     animation: coldFire 5s linear infinite;
+   
+  }
+  .flex-item1 {
+    flex: 0 1 90%;
+  }
+  .flex-item2 {
+    flex: 0 1 10%; 
+    padding-left: 35px;
   }
   .text {
     font-size: 1rem;
@@ -152,17 +136,17 @@ text-align:center;
   }
 
   .chat-container {
-    position: absolute;
     bottom: 0;
-    width: auto;
-    padding: 20px;
+    padding-left: 0px im !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: transparent; /* Slightly darker to distinguish from the main area */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     opacity: 90%;
-    max-width: calc(100% - 0rem);
-    bottom:-60%;
+
+    
     }
   
   .chat-input {
@@ -172,14 +156,11 @@ text-align:center;
     background-color: #25282c; /* A darker shade for modern aesthetic */
     color: #ffffff; /* White text color */
     font-size: 16px; /* Adjust font size for better readability */
-    width: calc(48rem - 60px - 10px - 2rem); /* Assuming the send button is approximately 100px wide */
-    min-height: 39px; /* Initial height */
-    max-height: 40px; /* Maximum height before scrolling */
-    max-width:calc(100% - 60px - 10px - 2rem);
+    width: 100%; /* Assuming the send button is approximately 100px wide */
     overflow-y: auto; /* Enable vertical scrolling */
     resize: none; /* Disable user resize */
     caret-color: white; 
-
+    height: 20vh;
   }
 
   .chat-input::placeholder {
@@ -195,10 +176,10 @@ text-align:center;
   
   .send-button {backdrop-filter:blur(10px);
     padding: 10px;
-    width: 60px; /* Fixed width for the button */
-    height: 60px; /* Fixed height to match the chat input */
+    width: 65px; /* Fixed width for the button */
     border-radius: 10px; /* Circular button */
     border: none;
+    height: 22vh;
     background-color: #25282c;
     color: white;
     cursor: pointer;
