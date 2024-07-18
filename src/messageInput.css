@@ -55,7 +55,7 @@ text-align:center;
   /* Apply animation to div with class glow-div */
 textarea,
   .glow-div {
-    padding: 10px;
+   
     border: none;
     outline: none;
     border-radius: 5px;
@@ -98,6 +98,7 @@ textarea,
     -webkit-background-clip: text;
     background-clip: text;
     animation: coldFire 5s linear infinite;
+    padding-left:10px;
    
   }
   .flex-item1 {
@@ -105,7 +106,8 @@ textarea,
   }
   .flex-item2 {
     flex: 0 1 10%; 
-    padding-left: 35px;
+    padding-left: 3px;
+    margin-bottom: 2px;
   }
   .text {
     font-size: 1rem;
@@ -145,23 +147,25 @@ textarea,
     justify-content: flex-start;
     align-items: center;
     opacity: 90%;
-
-    
     }
   
   .chat-input {
     /* padding: 0rem 0rem;backdrop-filter:blur(10px); */
-    border-radius: 10px;
-    margin-right: 10px;
+   
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px; 
+    border-bottom-right-radius: 0px;
+    /* margin-right: 10px; */
     background-color: #25282c; /* A darker shade for modern aesthetic */
     color: #ffffff; /* White text color */
     font-size: 16px; /* Adjust font size for better readability */
-    width: 100%; /* Assuming the send button is approximately 100px wide */
+    width: 98%; /* Assuming the send button is approximately 100px wide */
     overflow-y: auto; /* Enable vertical scrolling */
     resize: none; /* Disable user resize */
     caret-color: white; 
     height: 20vh;
-  }
+  } 
 
   .chat-input::placeholder {
     color: #ffffff; /* Replace with the color you want */
@@ -174,12 +178,16 @@ textarea,
   }
   
   
-  .send-button {backdrop-filter:blur(10px);
+  .send-button {
+    backdrop-filter:blur(10px);
     padding: 10px;
     width: 65px; /* Fixed width for the button */
-    border-radius: 10px; /* Circular button */
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px; 
+    border-bottom-left-radius: 0px;
     border: none;
-    height: 22vh;
+    height: 20vh;
     background-color: #25282c;
     color: white;
     cursor: pointer;
@@ -188,7 +196,7 @@ textarea,
     justify-content: center;
     align-items: center;
     position: relative; /* Positioning context for pseudo-elements */
-    opacity: 90%;
+    opacity: 100%;
   }
   
   .send-button::before {

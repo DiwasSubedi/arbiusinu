@@ -35,7 +35,7 @@ const MessageInput = ({ dispatch }) => {
             onKeyPress={handleEnterPress}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            row="10" 
+            row="15" 
           />
         </div>
         <div className={"flex-item2"}><button className="send-button" onClick={handleSendMessage}></button></div>

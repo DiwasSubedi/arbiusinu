@@ -114,3 +114,10 @@
   background-color: #80cbc4; /* Light blue scrollbar */
   border-radius: 5px;
 }
+
+.button-container img:hover {
+
+  /* Scale the image to 1.2 times its original size */
+  transform: scale(1.5);
+  transition: transform 0.2s ease; /* Smooth transition for the scaling */
+}
